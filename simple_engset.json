@@ -1,0 +1,22 @@
+{
+  "traffic_classes": {
+    1: {
+      "lambda": 1.0,
+      "micro": 1.0,
+      "size": 1
+    }
+  },
+  "sources": {
+    "SPa1": {
+      "type": "engset",
+      "N": 3,
+      "traffic_class": 1,
+      "attached": "G1"
+    }
+  },
+  "groups": {
+    "G1": {
+      "capacity": 2
+    }
+  }
+}
