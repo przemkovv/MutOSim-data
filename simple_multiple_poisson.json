@@ -1,11 +1,10 @@
-
 {
+  "name": "Four Poisson streams",
   "traffic_classes": {
     "0": {
       "micro": 1.0,
       "size": 1,
       "weight": 1
-
     },
     "1": {
       "micro": 1.0,

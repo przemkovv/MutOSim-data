@@ -1,22 +1,23 @@
 {
+  "name": "Single Engset",
   "traffic_classes": {
-    1: {
-      "lambda": 1.0,
+    "0": {
       "micro": 1.0,
-      "size": 1
+      "size": 1,
+      "weight": 1
     }
   },
   "sources": {
     "SPa1": {
       "type": "engset",
-      "N": 3,
-      "traffic_class": 1,
+      "N": 40,
+      "traffic_class": 0,
       "attached": "G1"
     }
   },
   "groups": {
     "G1": {
-      "capacity": 2
+      "capacity": 20
     }
   }
 }
