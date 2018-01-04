@@ -1,0 +1,114 @@
+{
+  "name": "Multiple Poisson stream, single overflow. Tab 3.1, S1",
+  "traffic_classes": {
+    "0": {
+      "micro": 1.0,
+      "size": 1,
+      "weight": 1
+    },
+    "1": {
+      "micro": 1.0,
+      "size": 2,
+      "weight": 1
+    },
+    "2": {
+      "micro": 1.0,
+      "size": 6,
+      "weight": 1
+    },
+    "3": {
+      "micro": 1.0,
+      "size": 1,
+      "weight": 1
+    },
+    "4": {
+      "micro": 1.0,
+      "size": 2,
+      "weight": 1
+    },
+    "5": {
+      "micro": 1.0,
+      "size": 6,
+      "weight": 1
+    },
+    "6": {
+      "micro": 1.0,
+      "size": 1,
+      "weight": 1
+    },
+    "7": {
+      "micro": 1.0,
+      "size": 2,
+      "weight": 1
+    },
+    "8": {
+      "micro": 1.0,
+      "size": 6,
+      "weight": 1
+    }
+  },
+  "sources": {
+    "SPo1-0": {
+      "type": "poisson",
+      "traffic_class": 0,
+      "attached": "G1"
+    },
+    "SPo1-1": {
+      "type": "poisson",
+      "traffic_class": 1,
+      "attached": "G1"
+    },
+    "SPo1-2": {
+      "type": "poisson",
+      "traffic_class": 2,
+      "attached": "G1"
+    },
+    "SPo2-0": {
+      "type": "poisson",
+      "traffic_class": 3,
+      "attached": "G2"
+    },
+    "SPo2-1": {
+      "type": "poisson",
+      "traffic_class": 4,
+      "attached": "G2"
+    },
+    "SPo2-2": {
+      "type": "poisson",
+      "traffic_class": 5,
+      "attached": "G2"
+    },
+    "SPo3-0": {
+      "type": "poisson",
+      "traffic_class": 6,
+      "attached": "G3"
+    },
+    "SPo3-1": {
+      "type": "poisson",
+      "traffic_class": 7,
+      "attached": "G3"
+    },
+    "SPo3-2": {
+      "type": "poisson",
+      "traffic_class": 8,
+      "attached": "G3"
+    }
+  },
+  "groups": {
+    "G1": {
+      "capacity": 60,
+      "connected": ["GO"]
+    },
+    "G2": {
+      "capacity": 60,
+      "connected": ["GO"]
+    },
+    "G3": {
+      "capacity": 60,
+      "connected": ["GO"]
+    },
+    "GO": {
+      "capacity": 42
+    }
+  }
+}

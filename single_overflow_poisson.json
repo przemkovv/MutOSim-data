@@ -1,0 +1,26 @@
+{
+  "name": "Single Poisson stream, single overflow",
+  "traffic_classes": {
+    "0": {
+      "micro": 1.0,
+      "size": 1,
+      "weight": 1
+    }
+  },
+  "sources": {
+    "SPo1": {
+      "type": "poisson",
+      "traffic_class": 0,
+      "attached": "G1"
+    }
+  },
+  "groups": {
+    "G1": {
+      "capacity": 2,
+      "connected": ["G2"]
+    },
+    "G2": {
+      "capacity": 2
+    }
+  }
+}
