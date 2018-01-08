@@ -97,18 +97,22 @@
   "groups": {
     "G1": {
       "capacity": 60,
-      "connected": ["GO"]
+      "connected": ["GO"],
+      "layer": 0
     },
     "G2": {
       "capacity": 60,
-      "connected": ["GO"]
+      "connected": ["GO"],
+      "layer": 0
     },
     "G3": {
       "capacity": 60,
-      "connected": ["GO"]
+      "connected": ["GO"],
+      "layer": 0
     },
     "GO": {
-      "capacity": 42
+      "capacity": 42,
+      "layer": 1
     }
   }
 }
