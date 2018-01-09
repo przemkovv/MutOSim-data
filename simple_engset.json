@@ -17,7 +17,8 @@
   },
   "groups": {
     "G1": {
-      "capacity": 20
+      "capacity": 20,
+      "layer": 0
     }
   }
 }
