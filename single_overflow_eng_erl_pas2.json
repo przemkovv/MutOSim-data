@@ -1,0 +1,94 @@
+{
+  "name": "Multiple 3 Erl, 3 Pa, 3 En stream, single overflow. t=1, t=2, t=3 ",
+  "traffic_classes": {
+    "0": {
+      "micro": 1.0,
+      "size": 1,
+      "weight": 1
+    },
+    "1": {
+      "micro": 1.0,
+      "size": 2,
+      "weight": 1
+    },
+    "2": {
+      "micro": 1.0,
+      "size": 3,
+      "weight": 1
+    }
+  },
+  "sources": {
+    "SPo1-0": {
+      "type": "poisson",
+      "traffic_class": 0,
+      "attached": "G1"
+    },
+    "SPo1-1": {
+      "type": "poisson",
+      "traffic_class": 1,
+      "attached": "G1"
+    },
+    "SPo1-2": {
+      "type": "poisson",
+      "traffic_class": 2,
+      "attached": "G1"
+    },
+    "SEn1-0": {
+      "type": "engset",
+      "traffic_class": 0,
+      "attached": "G2",
+      "N": 40
+    },
+    "SEn1-1": {
+      "type": "engset",
+      "traffic_class": 1,
+      "attached": "G2",
+      "N": 20
+    },
+    "SEn1-2": {
+      "type": "engset",
+      "traffic_class": 2,
+      "attached": "G2",
+      "N": 16
+    },
+    "SPa1-0": {
+      "type": "pascal",
+      "traffic_class": 0,
+      "attached": "G3",
+      "S": 40
+    },
+    "SPa1-1": {
+      "type": "pascal",
+      "traffic_class": 1,
+      "attached": "G3",
+      "S": 20
+    },
+    "SPa1-2": {
+      "type": "pascal",
+      "traffic_class": 2,
+      "attached": "G3",
+      "S": 16
+    }
+  },
+  "groups": {
+    "G1": {
+      "capacity": 16,
+      "connected": ["GO"],
+      "layer": 0
+    },
+    "G2": {
+      "capacity": 16,
+      "connected": ["GO"],
+      "layer": 0
+    },
+    "G3": {
+      "capacity": 16,
+      "connected": ["GO"],
+      "layer": 0
+    },
+    "GO": {
+      "capacity": 16,
+      "layer": 1
+    }
+  }
+}
