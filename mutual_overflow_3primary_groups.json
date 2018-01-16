@@ -4,47 +4,56 @@
     "0": {
       "micro": 1.0,
       "size": 1,
-      "weight": 1
+      "weight": 1,
+      "max_path_length": 2
     },
     "1": {
       "micro": 1.0,
       "size": 2,
-      "weight": 1
+      "weight": 1,
+      "max_path_length": 2
     },
     "2": {
       "micro": 1.0,
       "size": 3,
-      "weight": 1
+      "weight": 1,
+      "max_path_length": 2
     },
     "3": {
       "micro": 1.0,
       "size": 1,
-      "weight": 1
+      "weight": 1,
+      "max_path_length": 2
     },
     "4": {
       "micro": 1.0,
       "size": 2,
-      "weight": 1
+      "weight": 1,
+      "max_path_length": 2
     },
     "5": {
       "micro": 1.0,
       "size": 3,
-      "weight": 1
+      "weight": 1,
+      "max_path_length": 2
     },
     "6": {
       "micro": 1.0,
       "size": 1,
-      "weight": 1
+      "weight": 1,
+      "max_path_length": 2
     },
     "7": {
       "micro": 1.0,
       "size": 2,
-      "weight": 1
+      "weight": 1,
+      "max_path_length": 2
     },
     "8": {
       "micro": 1.0,
       "size": 3,
-      "weight": 1
+      "weight": 1,
+      "max_path_length": 2
     }
   },
   "sources": {
@@ -103,7 +112,7 @@
     "G2": {
       "capacity": 30,
       "connected": ["G1", "G3"],
-      "intensity_multiplier": 1.5,
+      "intensity_multiplier": 1.0,
       "layer": 0
     },
     "G3": {
