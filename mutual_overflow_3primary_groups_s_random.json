@@ -1,5 +1,5 @@
 {
-  "name": "Mutual overflow with 3 primary groups. One overflowing. Always first",
+  "name": "Mutual overflow with 3 primary groups. One overflowing. Random available",
   "traffic_classes": {
     "_default": {
       "micro": 1.0,
@@ -90,7 +90,7 @@
     "G2": {
       "capacity": 30,
       "connected": ["G1", "G3"],
-      "overflow_policy": "always_first",
+      "overflow_policy": "random_available",
       "layer": 0
     },
     "G3": {
