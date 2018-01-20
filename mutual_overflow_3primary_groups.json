@@ -86,17 +86,20 @@
     "G1": {
       "capacity": 30,
       "connected": ["G2", "G3"],
+      "overflow_policy": "always_first",
       "layer": 0
     },
     "G2": {
       "capacity": 30,
       "connected": ["G1", "G3"],
       "intensity_multiplier": 1.0,
+      "overflow_policy": "always_first",
       "layer": 0
     },
     "G3": {
       "capacity": 30,
       "connected": ["G1", "G2"],
+      "overflow_policy": "always_first",
       "layer": 0
     }
   }
