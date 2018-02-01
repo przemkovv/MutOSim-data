@@ -5,7 +5,7 @@
       "micro": 1.0,
       "size": 1,
       "weight": 1,
-      "max_path_length": 3
+      "max_path_length": 5
     },
     "0": {
       "size": 1
@@ -91,7 +91,7 @@
     },
     "G2": {
       "capacity": 30,
-      "connected": ["G1", "G3"],
+      "connected": ["G1", "G3", "G0"],
       "overflow_policy": "lowest_free_capacity",
       "layer": 0
     },

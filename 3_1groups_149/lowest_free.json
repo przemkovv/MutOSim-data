@@ -91,7 +91,7 @@
     },
     "G2": {
       "capacity": 50,
-      "connected": ["G1", "G3"],
+      "connected": ["G1", "G3", "G0"],
       "overflow_policy": "lowest_free_capacity",
       "layer": 0
     },
