@@ -1,11 +1,11 @@
 {
-  "name": "3+1 groups 149. No mutual overflows.",
+  "name": "3+1 groups 149. Three overflowing. Lowest free capacity",
   "traffic_classes": {
     "_default": {
       "micro": 1.0,
       "size": 1,
       "weight": 1,
-      "max_path_length": 3
+      "max_path_length": 5
     },
     "0": {
       "size": 1
@@ -85,20 +85,20 @@
   "groups": {
     "G1": {
       "capacity": 60,
-      "connected": [ "G0"],
-      "overflow_policy": "always_first",
+      "connected": ["G3", "G2", "G0"],
+      "overflow_policy": "lowest_free_capacity",
       "layer": 0
     },
     "G2": {
       "capacity": 50,
-      "connected": [ "G0"],
-      "overflow_policy": "always_first",
+      "connected": ["G1", "G3", "G0"],
+      "overflow_policy": "lowest_free_capacity",
       "layer": 0
     },
     "G3": {
       "capacity": 40,
-      "connected": [ "G0"],
-      "overflow_policy": "always_first",
+      "connected": ["G1", "G2", "G0"],
+      "overflow_policy": "lowest_free_capacity",
       "layer": 0
     },
     "G0": {
