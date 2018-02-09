@@ -1,5 +1,5 @@
 {
-  "name": "3+1 groups 149. No overflows on the same layer",
+  "name": "3+1 groups 149. No mutual overflows.",
   "traffic_classes": {
     "_default": {
       "micro": 1.0,
@@ -85,20 +85,20 @@
   "groups": {
     "G1": {
       "capacity": 60,
-      "connected": ["G0"],
-      "overflow_policy": "first_available",
+      "connected": [ "G0"],
+      "overflow_policy": "always_first",
       "layer": 0
     },
     "G2": {
       "capacity": 50,
-      "connected": ["G0"],
-      "overflow_policy": "first_available",
+      "connected": [ "G0"],
+      "overflow_policy": "always_first",
       "layer": 0
     },
     "G3": {
       "capacity": 40,
-      "connected": ["G0"],
-      "overflow_policy": "first_available",
+      "connected": [ "G0"],
+      "overflow_policy": "always_first",
       "layer": 0
     },
     "G0": {

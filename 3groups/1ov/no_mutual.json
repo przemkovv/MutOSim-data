@@ -1,5 +1,5 @@
 {
-  "name": "3+1 groups 149. No overflows on the same layer",
+  "name": "3 groups. No mutual overflows",
   "traffic_classes": {
     "_default": {
       "micro": 1.0,
@@ -11,28 +11,28 @@
       "size": 1
     },
     "1": {
-      "size": 4
+      "size": 2
     },
     "2": {
-      "size": 9
+      "size": 3
     },
     "3": {
       "size": 1
     },
     "4": {
-      "size": 4
+      "size": 2
     },
     "5": {
-      "size": 9
+      "size": 3
     },
     "6": {
       "size": 1
     },
     "7": {
-      "size": 4
+      "size": 2
     },
     "8": {
-      "size": 9
+      "size": 3
     }
   },
   "sources": {
@@ -84,27 +84,16 @@
   },
   "groups": {
     "G1": {
-      "capacity": 60,
-      "connected": ["G0"],
-      "overflow_policy": "first_available",
+      "capacity": 30,
       "layer": 0
     },
     "G2": {
-      "capacity": 50,
-      "connected": ["G0"],
-      "overflow_policy": "first_available",
-      "intensity_multiplier": 1.5,
+      "capacity": 30,
       "layer": 0
     },
     "G3": {
-      "capacity": 40,
-      "connected": ["G0"],
-      "overflow_policy": "first_available",
+      "capacity": 30,
       "layer": 0
-    },
-    "G0": {
-      "capacity": 80,
-      "layer": 1
     }
   }
 }

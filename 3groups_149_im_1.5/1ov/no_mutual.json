@@ -1,5 +1,5 @@
 {
-  "name": "3 groups 149. No overflows",
+  "name": "3 groups 149. No mutual overflows",
   "traffic_classes": {
     "_default": {
       "micro": 1.0,
