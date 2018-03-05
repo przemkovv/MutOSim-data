@@ -1,0 +1,107 @@
+{
+  "name": "3 groups 149. One overflowing. Compression t9->6->3",
+  "traffic_classes": {
+    "_default": {
+      "micro": 1.0,
+      "size": 1,
+      "weight": 1,
+      "max_path_length": 3
+    },
+    "0": {
+      "size": 1
+    },
+    "1": {
+      "size": 4
+    },
+    "2": {
+      "size": 9
+    },
+    "3": {
+      "size": 1
+    },
+    "4": {
+      "size": 4
+    },
+    "5": {
+      "size": 9
+    },
+    "6": {
+      "size": 1
+    },
+    "7": {
+      "size": 4
+    },
+    "8": {
+      "size": 9
+    }
+  },
+  "sources": {
+    "SPo1-0": {
+      "type": "poisson",
+      "traffic_class": 0,
+      "attached": "G1"
+    },
+    "SPo1-1": {
+      "type": "poisson",
+      "traffic_class": 1,
+      "attached": "G1"
+    },
+    "SPo1-2": {
+      "type": "poisson",
+      "traffic_class": 2,
+      "attached": "G1"
+    },
+    "SPo2-0": {
+      "type": "poisson",
+      "traffic_class": 3,
+      "attached": "G2"
+    },
+    "SPo2-1": {
+      "type": "poisson",
+      "traffic_class": 4,
+      "attached": "G2"
+    },
+    "SPo2-2": {
+      "type": "poisson",
+      "traffic_class": 5,
+      "attached": "G2"
+    },
+    "SPo3-0": {
+      "type": "poisson",
+      "traffic_class": 6,
+      "attached": "G3"
+    },
+    "SPo3-1": {
+      "type": "poisson",
+      "traffic_class": 7,
+      "attached": "G3"
+    },
+    "SPo3-2": {
+      "type": "poisson",
+      "traffic_class": 8,
+      "attached": "G3"
+    }
+  },
+  "groups": {
+    "G1": {
+      "capacity": 60,
+      "overflow_policy": "highest_free_capacity",
+      "layer": 0
+    },
+    "G2": {
+      "capacity": 50,
+      "connected": ["G1", "G3"],
+      "overflow_policy": "highest_free_capacity",
+      "layer": 0,
+      "traffic_classes": {
+        "5": { "compression": [{ "threshold": 30, "size": 6, "intensity_factor": 1.0},
+                               { "threshold": 40, "size": 3, "intensity_factor": 1.0} ]}
+      }
+    },
+    "G3": {
+      "capacity": 40,
+      "overflow_policy": "highest_free_capacity",
+      "layer": 0
+    }
+  }
+}
