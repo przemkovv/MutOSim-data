@@ -95,8 +95,10 @@
       "overflow_policy": "highest_free_capacity",
       "layer": 0,
       "traffic_classes": {
-        "4": { "compression": [{ "threshold": 25, "size": 2, "intensity_factor": 1.0}] },
-        "5": { "compression": [{ "threshold": 30, "size": 6, "intensity_factor": 1.0} ]}
+        "4": { "compression": [{ "threshold": 25, "size": 2, "intensity_factor": 1.0},
+                               { "threshold": 15, "size": 2, "intensity_factor": 1.0}] },
+          "5": { "compression": [{ "threshold": 30, "size": 6, "intensity_factor": 1.0},
+                                 { "threshold": 40, "size": 6, "intensity_factor": 1.0} ]}
       }
     },
     "G3": {
