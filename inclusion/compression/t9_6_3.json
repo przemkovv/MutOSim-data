@@ -1,6 +1,5 @@
 {
-  "name": "3+1 groups 149. 1 overflowing. Random. Compression t9->6->3",
-  "_include": "../random.json",
+  "name": "Compression t9->6->3",
   "groups": {
     "G2": {
       "traffic_classes": {
