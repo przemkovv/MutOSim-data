@@ -1,0 +1,18 @@
+{
+  "name": "3+1 groups 149. One overflowing. Random available",
+  "_include": "../base.json",
+  "groups": {
+    "G1": {
+      "connected": ["G0"],
+      "overflow_policy": "random_available"
+    },
+    "G2": {
+      "connected": ["G1", "G3", "G0"],
+      "overflow_policy": "random_available"
+    },
+    "G3": {
+      "connected": ["G0"],
+      "overflow_policy": "random_available"
+    }
+  }
+}
