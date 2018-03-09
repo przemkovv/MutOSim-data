@@ -1,0 +1,8 @@
+{
+  "name": "IM 1.5",
+  "groups": {
+    "G2": {
+      "intensity_multiplier": 1.5
+    }
+  }
+}

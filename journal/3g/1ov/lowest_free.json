@@ -1,0 +1,10 @@
+{
+  "name": "3 groups. 1ov. Lowest free capacity",
+  "_include": "../base.json",
+  "groups": {
+    "G2": {
+      "connected": ["G1", "G3"],
+      "overflow_policy": "lowest_free_capacity"
+    }
+  }
+}
