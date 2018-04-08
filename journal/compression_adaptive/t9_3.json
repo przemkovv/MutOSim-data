@@ -1,0 +1,10 @@
+{
+  "name": "Compression t9->int(0.33)",
+  "groups": {
+    "G2": {
+      "traffic_classes": {
+        "5": { "compression": [{ "threshold": 30, "size": 9, "intensity_factor": 0.33} ]}
+      }
+    }
+  }
+}
