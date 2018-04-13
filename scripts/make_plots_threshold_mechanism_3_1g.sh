@@ -130,6 +130,10 @@ PUB_1_2SIZE="--width=5 --height=5"
 PUB_2_1SIZE="--width=5 --height=5"
 PUB_3_2SIZE="--width=5 --height=10"
 
+PUB_3_1SIZE="--width=6.3 --height=7"
+PUB_1_1SIZE="--width=6.3 --height=2.5"
+PUB_1_1SIZE_A="--width=6.3 --height=2.3"
+
 set -x
 X_LIMITS='--x_min=0.45 --x_max=1.8'
 ARGS="$X_LIMITS -s --output-dir data/results/plots/journal3 -q"
