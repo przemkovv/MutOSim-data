@@ -1,0 +1,109 @@
+{
+  "name": "3+1 groups 126. No mutual overflows",
+  "traffic_classes": {
+    "_default": {
+      "micro": 1.0,
+      "size": 1,
+      "weight": 1,
+      "max_path_length": 3
+    },
+    "0": {
+      "size": 1
+    },
+    "1": {
+      "size": 2
+    },
+    "2": {
+      "size": 6
+    },
+    "3": {
+      "size": 1
+    },
+    "4": {
+      "size": 2
+    },
+    "5": {
+      "size": 6
+    },
+    "6": {
+      "size": 1
+    },
+    "7": {
+      "size": 2
+    },
+    "8": {
+      "size": 6
+    }
+  },
+  "sources": {
+    "SPo1-0": {
+      "type": "poisson",
+      "traffic_class": 0,
+      "attached": "G1"
+    },
+    "SPo1-1": {
+      "type": "poisson",
+      "traffic_class": 1,
+      "attached": "G1"
+    },
+    "SPo1-2": {
+      "type": "poisson",
+      "traffic_class": 2,
+      "attached": "G1"
+    },
+    "SPo2-0": {
+      "type": "poisson",
+      "traffic_class": 3,
+      "attached": "G2"
+    },
+    "SPo2-1": {
+      "type": "poisson",
+      "traffic_class": 4,
+      "attached": "G2"
+    },
+    "SPo2-2": {
+      "type": "poisson",
+      "traffic_class": 5,
+      "attached": "G2"
+    },
+    "SPo3-0": {
+      "type": "poisson",
+      "traffic_class": 6,
+      "attached": "G3"
+    },
+    "SPo3-1": {
+      "type": "poisson",
+      "traffic_class": 7,
+      "attached": "G3"
+    },
+    "SPo3-2": {
+      "type": "poisson",
+      "traffic_class": 8,
+      "attached": "G3"
+    }
+  },
+  "groups": {
+    "G1": {
+      "capacity": 60,
+      "connected": ["G0"],
+      "overflow_policy": "always_first",
+      "layer": 0
+    },
+    "G2": {
+      "capacity": 60,
+      "connected": ["G0"],
+      "overflow_policy": "always_first",
+      "layer": 0
+    },
+    "G3": {
+      "capacity": 60,
+      "connected": ["G0"],
+      "overflow_policy": "always_first",
+      "layer": 0
+    },
+    "G0": {
+      "capacity": 42,
+      "layer": 1
+    }
+  }
+}
