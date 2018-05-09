@@ -53,32 +53,32 @@
     },
     "SPo2-0": {
       "type": "poisson",
-      "traffic_class": 3,
+      "traffic_class": 0,
       "attached": "G2"
     },
     "SPo2-1": {
       "type": "poisson",
-      "traffic_class": 4,
+      "traffic_class": 1,
       "attached": "G2"
     },
     "SPo2-2": {
       "type": "poisson",
-      "traffic_class": 5,
+      "traffic_class": 2,
       "attached": "G2"
     },
     "SPo3-0": {
       "type": "poisson",
-      "traffic_class": 6,
+      "traffic_class": 0,
       "attached": "G3"
     },
     "SPo3-1": {
       "type": "poisson",
-      "traffic_class": 7,
+      "traffic_class": 1,
       "attached": "G3"
     },
     "SPo3-2": {
       "type": "poisson",
-      "traffic_class": 8,
+      "traffic_class": 2,
       "attached": "G3"
     }
   },
