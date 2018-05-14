@@ -9,16 +9,18 @@ fi
 
 if [[ $1 -eq 1 ]]; then
   DATA="data/results/const_ratio.json"
-  $PLOT $DATA $OUT_DIR -x2 -y2 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,1),(2,3),(4,5),(6,7)" --y_min=50 --y_max=150  -n_50percent_range_similarity ${SAVE}
-  $PLOT $DATA $OUT_DIR -x2 -y2 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,1),(2,3),(4,5),(6,7)" --y_min=98 --y_max=102 -n _2percent_range_similarity $SAVE
-  $PLOT $DATA $OUT_DIR -x2 -y3 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,2),(2,4),(4,6),(1,3),(3,5),(5,7)" --y_min=50 --y_max=150  -n_50percent_range_convergence $SAVE
-  $PLOT $DATA $OUT_DIR -x2 -y3 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,2),(2,4),(4,6),(1,3),(3,5),(5,7)" --y_min=98 --y_max=102 -n _2percent_range_convergence $SAVE
+  $PLOT $DATA $OUT_DIR -x2 -y2 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,1),(2,3),(4,5),(6,7)" --y_min=50 --y_max=150  -n_50percent_range_similarity ${SAVE} &
+  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,1),(2,3),(4,5),(6,7)" --y_min=97 --y_max=103 -n _3percent_range_similarity $SAVE &
+  $PLOT $DATA $OUT_DIR -x2 -y3 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,2),(2,4),(4,6),(1,3),(3,5),(5,7)" --y_min=50 --y_max=150  -n_50percent_range_convergence $SAVE &
+  # $PLOT $DATA $OUT_DIR -x2 -y3 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,2),(2,4),(4,6),(1,3),(3,5),(5,7)" --y_min=98 --y_max=102 -n _2percent_range_convergence $SAVE
+  $PLOT $DATA $OUT_DIR -x3 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,2),(2,4),(4,6)" --y_min=97 --y_max=103 -n _3percent_range_convergence_const $SAVE &
+  $PLOT $DATA $OUT_DIR -x3 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(1,3),(3,5),(5,7)" --y_min=97 --y_max=103 -n _3percent_range_convergence_var $SAVE &
 fi
 
 if [[ $1 -eq 2 ]]; then
   DATA="data/results/var_ratio.json"
-  $PLOT $DATA $OUT_DIR -x3 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,1),(2,3),(4,5)," --y_min=50 --y_max=150  -n_50percent_range_similarity $SAVE
-  $PLOT $DATA $OUT_DIR -x3 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,1),(2,3),(4,5)," --y_min=98 --y_max=102 -n _2percent_range_similarity $SAVE
+  $PLOT $DATA $OUT_DIR -x3 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,1),(2,3),(4,5)," --y_min=50 --y_max=150  -n_50percent_range_similarity $SAVE &
+  $PLOT $DATA $OUT_DIR -x3 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,1),(2,3),(4,5)," --y_min=97 --y_max=103 -n _3percent_range_similarity $SAVE &
 fi
 if [[ $1 -eq 3 ]]; then
   DATA="data/results/var_ratio.json"
