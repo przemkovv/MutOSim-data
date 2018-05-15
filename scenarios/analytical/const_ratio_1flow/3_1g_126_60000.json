@@ -1,0 +1,79 @@
+{
+  "name": "3+1 groups 126. No mutual overflows",
+  "traffic_classes": {
+    "_default": {
+      "micro": 1.0,
+      "size": 1,
+      "weight": 1,
+      "max_path_length": 3
+    },
+    "0": {
+      "size": 2000
+    },
+    "1": {
+      "size": 2000
+    },
+    "2": {
+      "size": 6000
+    },
+    "3": {
+      "size": 1000
+    },
+    "4": {
+      "size": 2000
+    },
+    "5": {
+      "size": 6000
+    },
+    "6": {
+      "size": 1000
+    },
+    "7": {
+      "size": 2000
+    },
+    "8": {
+      "size": 6000
+    }
+  },
+  "sources": {
+    "SPo1-0": {
+      "type": "poisson",
+      "traffic_class": 0,
+      "attached": "G1"
+    },
+    "SPo2-0": {
+      "type": "poisson",
+      "traffic_class": 0,
+      "attached": "G2"
+    },
+    "SPo3-0": {
+      "type": "poisson",
+      "traffic_class": 0,
+      "attached": "G3"
+    }
+  },
+  "groups": {
+    "G1": {
+      "capacity": 60000,
+      "connected": ["G0"],
+      "overflow_policy": "always_first",
+      "layer": 0
+    },
+    "G2": {
+      "capacity": 60000,
+      "connected": ["G0"],
+      "overflow_policy": "always_first",
+      "layer": 0
+    },
+    "G3": {
+      "capacity": 60000,
+      "connected": ["G0"],
+      "overflow_policy": "always_first",
+      "layer": 0
+    },
+    "G0": {
+      "capacity": 42000,
+      "layer": 1
+    }
+  }
+}
