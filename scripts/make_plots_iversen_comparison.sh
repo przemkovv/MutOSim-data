@@ -42,7 +42,11 @@ if [[ $1 -eq 4 ]]; then
   # $PLOT $DATA $OUT_DIR -x4 -y1 --normal -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 -i3,4,5 -n_600 ${SAVE} &
   # $PLOT $DATA $OUT_DIR -x4 -y1 --normal -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 -i6,7,8 -n_6000 ${SAVE} &
   # $PLOT $DATA $OUT_DIR -x4 -y1 --normal -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 -i9,10,11 -n_60000 ${SAVE} &
-  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(13,12),(14,12)" --y_min=-0.5 --y_max=0.5  -n_50percent_range_similarity ${SAVE} 
+  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(13,12),(14,12)" --y_min=-0.5 --y_max=0.5  -n_50percent_range_similarity ${SAVE} 
+
+  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(1,0),(2,0)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} 
+  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G1',)" --x_max=1.8 --x_min=0.4 --pairs="(1,0),(2,0)" --y_min=-0.5 --y_max=0.5  -n_50percent_range_similarity ${SAVE} 
+
   # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(1,0),(2,0),(4,3),(5,3)" --y_min=-0.5 --y_max=0.5  -n_50percent_range_similarity ${SAVE} 
   # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(7,6),(8,6),(10,9),(11,9)" --y_min=-0.5 --y_max=0.5  -n_50percent_range_similarity ${SAVE}
   # $PLOT $DATA $OUT_DIR -x2 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(10,9),(11,9)" --y_min=50 --y_max=150  -n_50percent_range_similarity ${SAVE}
