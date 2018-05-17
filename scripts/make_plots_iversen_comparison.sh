@@ -37,6 +37,9 @@ fi
 if [[ $1 -eq 4 ]]; then
   # DATA="data/results/const_ratio_small.json"
   DATA="data/results/const_ratio.json"
+  GROUP="--groups=\"('G0',)\""
+  RANGE="--x_max=2.4 --x_min=0.7"
+
   # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(1,0),(2,0),(4,3),(5,3)" --y_min=50 --y_max=150  -n_50percent_range_similarity ${SAVE} 
   # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(7,6),(8,6),(10,9),(11,9)" --y_min=50 --y_max=150  -n_50percent_range_similarity ${SAVE}
   # $PLOT $DATA $OUT_DIR -x4 -y1 --normal -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 -i0,1,2 -n_60 ${SAVE} &
@@ -45,10 +48,10 @@ if [[ $1 -eq 4 ]]; then
   # $PLOT $DATA $OUT_DIR -x4 -y1 --normal -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 -i9,10,11 -n_60000 ${SAVE} &
   # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(13,12),(14,12)" --y_min=-0.5 --y_max=0.5  -n_50percent_range_similarity ${SAVE} 
 
-  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(1,0),(2,0)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} &
-  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(4,3),(5,3)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} &
-  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(7,6),(8,6)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} &
-  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(10,9),(11,9)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} &
+  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block ${GROUP} ${RANGE} --pairs="(1,0),(2,0)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} &
+  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block ${GROUP} ${RANGE} --pairs="(4,3),(5,3)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} &
+  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block ${GROUP} ${RANGE} --pairs="(7,6),(8,6)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} &
+  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block ${GROUP} ${RANGE} --pairs="(10,9),(11,9)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} &
   # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(1,0),(2,0)" --y_min=-0 --y_max=200  -n_50percent_range_similarity ${SAVE} &
   # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G1',)" --x_max=1.8 --x_min=0.4 --pairs="(1,0),(2,0)" --y_min=-0.5 --y_max=0.5  -n_50percent_range_similarity ${SAVE} 
 
@@ -69,30 +72,16 @@ if [[ $1 -eq 5 ]]; then
   # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(7,6),(8,6),(10,9),(11,9)" --y_min=50 --y_max=150  -n_50percent_range_similarity ${SAVE}
   set -x
   GROUP="--groups=\"('G0',)\""
-  $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p peakedness ${GROUP} --x_max=2.0 --x_min=0.0 --y_min=0 --y_max=2 -i1,2 -n_60 ${SAVE} &
-  $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p variance ${GROUP} --x_max=2.0 --x_min=0.0 --y_min=0 --y_max=20 -i1,2 -n_60 ${SAVE} &
-  $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p mean ${GROUP} --x_max=2.0 --x_min=0.0  --y_min=0 --y_max=20 -i1,2 -n_60 ${SAVE} &
-  $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p fictious_capacity ${GROUP} --x_max=2.0 --x_min=0.0  --y_min=0 --y_max=20 -i1,2 -n_60 ${SAVE} &
-  $PLOT $DATA $OUT_DIR -x4 -y1 --normal -p P_block ${GROUP} --x_max=2.0 --x_min=0.0  -i1,2 -n_60 ${SAVE} &
-  # $PLOT $DATA $OUT_DIR -x4 -y1 --normal -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 -i3,4,5 -n_600 ${SAVE} &
-  # $PLOT $DATA $OUT_DIR -x4 -y1 --normal -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 -i6,7,8 -n_6000 ${SAVE} &
-  # $PLOT $DATA $OUT_DIR -x4 -y1 --normal -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 -i9,10,11 -n_60000 ${SAVE} &
-  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(13,12),(14,12)" --y_min=-0.5 --y_max=0.5  -n_50percent_range_similarity ${SAVE} 
+  RANGE="--x_max=2.4 --x_min=0.7"
 
-  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(1,0),(2,0)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} &
-  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(4,3),(5,3)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} &
-  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(7,6),(8,6)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} &
-  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(10,9),(11,9)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} &
+  # $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p peakedness ${GROUP} ${RANGE} --y_min=0 --y_max=2 -i1,2 -n_60 ${SAVE} &
+  # $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p variance ${GROUP} ${RANGE} --y_min=0 --y_max=20 -i1,2 -n_60 ${SAVE} &
+  # $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p mean ${GROUP} ${RANGE}  --y_min=0 --y_max=20 -i1,2 -n_60 ${SAVE} &
+  # $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p fictious_capacity ${GROUP} ${RANGE}  --y_min=0 --y_max=20 -i1,2 -n_60 ${SAVE} &
 
-  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(1,0),(2,0)" --y_min=-0 --y_max=200  -n_50percent_range_similarity ${SAVE} &
-  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G1',)" --x_max=1.8 --x_min=0.4 --pairs="(1,0),(2,0)" --y_min=-0.5 --y_max=0.5  -n_50percent_range_similarity ${SAVE} 
+  $PLOT $DATA $OUT_DIR -x2 -y1 --normal -p P_block ${GROUP} ${RANGE}  -i1,2 -n_60 ${SAVE} &
 
-  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(1,0),(2,0),(4,3),(5,3)" --y_min=-0.5 --y_max=0.5  -n_50percent_range_similarity ${SAVE} 
-  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(7,6),(8,6),(10,9),(11,9)" --y_min=-0.5 --y_max=0.5  -n_50percent_range_similarity ${SAVE}
-  # $PLOT $DATA $OUT_DIR -x2 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(10,9),(11,9)" --y_min=50 --y_max=150  -n_50percent_range_similarity ${SAVE}
-  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,1),(2,3),(4,5),(6,7)" --y_min=97 --y_max=103 -n _3percent_range_similarity $SAVE 
-  # $PLOT $DATA $OUT_DIR -x2 -y3 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,2),(2,4),(4,6),(1,3),(3,5),(5,7)" --y_min=50 --y_max=150  -n_50percent_range_convergence $SAVE 
-  # # $PLOT $DATA $OUT_DIR -x2 -y3 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,2),(2,4),(4,6),(1,3),(3,5),(5,7)" --y_min=98 --y_max=102 -n _2percent_range_convergence $SAVE
-  # $PLOT $DATA $OUT_DIR -x3 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(0,2),(2,4),(4,6)" --y_min=97 --y_max=103 -n _3percent_range_convergence_const $SAVE 
-  # $PLOT $DATA $OUT_DIR -x3 -y1 --relatives --linear -p P_block --groups="('G0',)" --x_max=1.8 --x_min=0.4 --pairs="(1,3),(3,5),(5,7)" --y_min=97 --y_max=103 -n _3percent_range_convergence_var $SAVE 
+  $PLOT $DATA $OUT_DIR -x2 -y1 --relatives --linear -p P_block ${GROUP} ${RANGE} --pairs="(1,0),(2,0)" --y_min=-0 --y_max=200  -n_50percent_range_similarity ${SAVE} &
+  $PLOT $DATA $OUT_DIR -x2 -y1 --relatives-diffs --linear -p P_block ${GROUP} ${RANGE} --pairs="(1,0),(2,0)" --y_min=-0.5 --y_max=0.5  -n_50percent_range_similarity ${SAVE}  &
+
 fi
