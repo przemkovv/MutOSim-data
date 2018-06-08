@@ -64,7 +64,7 @@ fi
 if [[ $1 -eq 6 ]]; then
   # DATA="data/results/const_ratio_small.json"
   DATA="data/results/const_ratio_13.json"
-  DATA="data/results/const_ratio_13_wo_interp.json"
+  # DATA="data/results/const_ratio_13_wo_interp.json"
   GROUP="--groups=\"('G0',)\""
   RANGE="--x_max=2.4 --x_min=0.7"
 
@@ -81,15 +81,16 @@ if [[ $1 -eq 6 ]]; then
   $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block ${GROUP} ${RANGE} --pairs="(7,6),(8,6)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} &
   $PLOT $DATA $OUT_DIR -x4 -y1 --relatives-diffs --linear -p P_block ${GROUP} ${RANGE} --pairs="(10,9),(11,9)" --y_min=-0.3 --y_max=0.3  -n_50percent_range_similarity ${SAVE} &
 
-  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block ${GROUP} ${RANGE} --pairs="(1,0),(2,0)" --y_min=0 --y_max=200  -n_50percent_range_similarity ${SAVE} &
-  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block ${GROUP} ${RANGE} --pairs="(4,3),(5,3)" --y_min=0 --y_max=200  -n_50percent_range_similarity ${SAVE} &
-  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block ${GROUP} ${RANGE} --pairs="(7,6),(8,6)" --y_min=0 --y_max=200  -n_50percent_range_similarity ${SAVE} &
-  $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block ${GROUP} ${RANGE} --pairs="(10,9),(11,9)" --y_min=0 --y_max=200  -n_50percent_range_similarity ${SAVE} &
+  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block ${GROUP} ${RANGE} --pairs="(1,0),(2,0)" --y_min=0 --y_max=200  -n_50percent_range_similarity ${SAVE} &
+  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block ${GROUP} ${RANGE} --pairs="(4,3),(5,3)" --y_min=0 --y_max=200  -n_50percent_range_similarity ${SAVE} &
+  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block ${GROUP} ${RANGE} --pairs="(7,6),(8,6)" --y_min=0 --y_max=200  -n_50percent_range_similarity ${SAVE} &
+  # $PLOT $DATA $OUT_DIR -x4 -y1 --relatives --linear -p P_block ${GROUP} ${RANGE} --pairs="(10,9),(11,9)" --y_min=0 --y_max=200  -n_50percent_range_similarity ${SAVE} &
 
-  $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p peakedness ${GROUP} ${RANGE} --y_min=0 --y_max=2 -i7,10 -n_60 ${SAVE} &
-  $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p peakedness ${GROUP} ${RANGE} --y_min=0 --y_max=2 -i1,4 -n_60 ${SAVE} &
-  $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p peakedness ${GROUP} ${RANGE} --y_min=0 --y_max=2 -i2,5 -n_60 ${SAVE} &
-  $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p peakedness ${GROUP} ${RANGE} --y_min=0 --y_max=2 -i8,11 -n_60 ${SAVE} &
+  # $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p peakedness ${GROUP} ${RANGE} --y_min=0 --y_max=2 -i7,10 -n_60 ${SAVE} &
+  # $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p peakedness ${GROUP} ${RANGE} --y_min=0 --y_max=2 -i1,4 -n_60 ${SAVE} &
+  # $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p peakedness ${GROUP} ${RANGE} --y_min=0 --y_max=2 -i2,5 -n_60 ${SAVE} &
+  # $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p peakedness ${GROUP} ${RANGE} --y_min=0 --y_max=2 -i8,11 -n_60 ${SAVE} &
+
   # $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p variance ${GROUP} ${RANGE} --y_min=0 --y_max=20 -i1,2 -n_60 ${SAVE} &
   # $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p mean ${GROUP} ${RANGE}  --y_min=0 --y_max=20 -i1,2 -n_60 ${SAVE} &
   # $PLOT $DATA $OUT_DIR -x4 -y1 --normal --linear -p fictious_capacity ${GROUP} ${RANGE}  --y_min=0 --y_max=20 -i1,2 -n_60 ${SAVE} &
