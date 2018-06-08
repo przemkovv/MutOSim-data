@@ -1,0 +1,49 @@
+{
+  "name": "1+1 groups. 149, 3000",
+  "traffic_classes": {
+    "_default": {
+      "micro": 1.0,
+      "size": 1,
+      "weight": 1,
+      "max_path_length": 3
+    },
+    "0": {
+      "size": 1
+    },
+    "1": {
+      "size": 4
+    },
+    "2": {
+      "size": 9
+    }
+  },
+  "sources": {
+    "SPo1-0": {
+      "type": "poisson",
+      "traffic_class": 0,
+      "attached": "G1"
+    },
+    "SPo1-1": {
+      "type": "poisson",
+      "traffic_class": 1,
+      "attached": "G1"
+    },
+    "SPo1-2": {
+      "type": "poisson",
+      "traffic_class": 2,
+      "attached": "G1"
+    }
+  },
+  "groups": {
+    "G1": {
+      "capacity": 3000,
+      "connected": ["G0"],
+      "overflow_policy": "always_first",
+      "layer": 0
+    },
+    "G0": {
+      "capacity": 3000,
+      "layer": 1
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "3+1 groups. 1, 30",
+  "traffic_classes": {
+    "_default": {
+      "micro": 1.0,
+      "size": 1,
+      "weight": 1,
+      "max_path_length": 3
+    },
+    "0": {
+      "size": 1
+    }
+  },
+  "sources": {
+    "SPo1-0": {
+      "type": "poisson",
+      "traffic_class": 0,
+      "attached": "G1"
+    },
+    "SPo2-0": {
+      "type": "poisson",
+      "traffic_class": 0,
+      "attached": "G2"
+    },
+    "SPo3-0": {
+      "type": "poisson",
+      "traffic_class": 0,
+      "attached": "G3"
+    }
+  },
+  "groups": {
+    "G1": {
+      "capacity": 30,
+      "connected": ["G0"],
+      "overflow_policy": "always_first",
+      "layer": 0
+    },
+    "G2": {
+      "capacity": 30,
+      "connected": ["G0"],
+      "overflow_policy": "always_first",
+      "layer": 0
+    },
+    "G3": {
+      "capacity": 30,
+      "connected": ["G0"],
+      "overflow_policy": "always_first",
+      "layer": 0
+    },
+    "G0": {
+      "capacity": 30,
+      "layer": 1
+    }
+  }
+}
