@@ -1,0 +1,109 @@
+{
+  "name": "3 groups 149",
+  "traffic_classes": {
+    "_default": {
+      "micro": 1.0,
+      "size": 1,
+      "weight": 1,
+      "max_path_length": 3
+    },
+    "1": {
+      "size": 4
+    },
+    "2": {
+      "size": 9
+    },
+    "3": {
+      "size": 1
+    },
+    "4": {
+      "size": 4
+    },
+    "5": {
+      "size": 9
+    },
+    "6": {
+      "size": 1
+    },
+    "7": {
+      "size": 4
+    },
+    "8": {
+      "size": 9
+    },
+    "9": {
+      "size": 1
+    }
+  },
+  "sources": {
+    "SPo1-0": {
+      "type": "poisson",
+      "traffic_class": 1,
+      "attached": "G1"
+    },
+    "SPa1-1": {
+      "type": "pascal",
+      "traffic_class": 2,
+      "attached": "G1",
+      "S": 10
+    },
+    "SEn1-2": {
+      "type": "engset",
+      "traffic_class": 3,
+      "attached": "G1",
+      "N": 15
+    },
+    "SPo2-0": {
+      "type": "poisson",
+      "traffic_class": 4,
+      "attached": "G2"
+    },
+    "SPa2-1": {
+      "type": "pascal",
+      "traffic_class": 5,
+      "attached": "G2",
+      "S": 10
+    },
+    "SEn2-2": {
+      "type": "engset",
+      "traffic_class": 6,
+      "attached": "G2",
+      "N": 15
+    },
+    "SPo3-0": {
+      "type": "poisson",
+      "traffic_class": 7,
+      "attached": "G3"
+    },
+    "SPa3-1": {
+      "type": "pascal",
+      "traffic_class": 8,
+      "attached": "G3",
+      "S": 10
+    },
+    "SEn3-2": {
+      "type": "engset",
+      "traffic_class": 9,
+      "attached": "G3",
+      "N": 15
+    }
+  },
+  "groups": {
+    "G1": {
+      "capacity": 80,
+      "overflow_policy": "highest_free_capacity",
+      "layer": 0
+    },
+    "G2": {
+      "capacity": 80,
+      "overflow_policy": "highest_free_capacity",
+      "layer": 0,
+      "intensity_multiplier": 1.5
+    },
+    "G3": {
+      "capacity": 80,
+      "overflow_policy": "highest_free_capacity",
+      "layer": 0
+    }
+  }
+}
