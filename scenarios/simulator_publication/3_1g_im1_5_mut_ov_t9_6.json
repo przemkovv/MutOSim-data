@@ -94,12 +94,9 @@
       "connected": ["G0"],
       "overflow_policy": "highest_free_capacity",
       "traffic_classes": {
-        "2": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]},
-        "5": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]},
-        "8": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]}
+        "2": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0} ]},
+        "5": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0} ]},
+        "8": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0} ]}
       },
       "layer": 0
     },
@@ -109,25 +106,20 @@
       "overflow_policy": "highest_free_capacity",
       "layer": 0,
       "traffic_classes": {
-        "2": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]},
-        "5": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]},
-        "8": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]}
-      }
+        "2": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0} ]},
+        "5": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0} ]},
+        "8": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0} ]}
+      },
+      "intensity_multiplier": 1.5
     },
     "G3": {
       "capacity": 80,
       "connected": ["G0"],
       "overflow_policy": "highest_free_capacity",
       "traffic_classes": {
-        "2": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]},
-        "5": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]},
-        "8": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]}
+        "2": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0} ]},
+        "5": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0} ]},
+        "8": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0} ]}
       },
       "layer": 0
     },

@@ -115,7 +115,8 @@
                                { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]},
         "8": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
                                { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]}
-      }
+      },
+      "intensity_multiplier": 1.5
     },
     "G3": {
       "capacity": 80,

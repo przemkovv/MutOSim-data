@@ -1,5 +1,5 @@
 {
-  "name": "3+1 groups 149. One overflowing. Compression t9->6->3",
+  "name": "3+1 groups 149. One overflowing",
   "traffic_classes": {
     "_default": {
       "micro": 1.0,
@@ -93,14 +93,6 @@
       "capacity": 80,
       "connected": ["G0"],
       "overflow_policy": "highest_free_capacity",
-      "traffic_classes": {
-        "2": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]},
-        "5": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]},
-        "8": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]}
-      },
       "layer": 0
     },
     "G2": {
@@ -108,27 +100,12 @@
       "connected": ["G0", "G1", "G3"],
       "overflow_policy": "highest_free_capacity",
       "layer": 0,
-      "traffic_classes": {
-        "2": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]},
-        "5": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]},
-        "8": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]}
-      }
+      "intensity_multiplier": 1.5
     },
     "G3": {
       "capacity": 80,
       "connected": ["G0"],
       "overflow_policy": "highest_free_capacity",
-      "traffic_classes": {
-        "2": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]},
-        "5": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]},
-        "8": { "compression": [{ "threshold": 40, "size": 6, "intensity_factor": 1.0},
-                               { "threshold": 60, "size": 3, "intensity_factor": 1.0} ]}
-      },
       "layer": 0
     },
     "G0": {
