@@ -50,7 +50,6 @@ tools/plot.py $DATA $PUB_1_1SIZE_B $ARGS $SCENARIOS -x 1 -y 1 --linear  --relati
 SUFFIX=_3g_mut_sub_noov_g1
 tools/plot.py $DATA $PUB_1_1SIZE_B $ARGS $SCENARIOS -x 1 -y 1 --linear  --relative-divs --pairs='(1,0,""),'  -p served -n $SUFFIX  --title-suffix='' $FORMAT --y_min=90 --y_max=120
 
-
 SUFFIX=_3g_mut_sub_noov_g1
 tools/plot.py $DATA $PUB_1_1SIZE_B $ARGS $SCENARIOS -x 1 -y 1 --linear  --relatives-diffs --pairs='(1,0),'  -p P_block -n $SUFFIX --groups="('G1')" --title-suffix='' $FORMAT --y_min=-0.2 --y_max=0.4
 
@@ -59,8 +58,6 @@ tools/plot.py $DATA $PUB_1_1SIZE_B $ARGS $SCENARIOS -x 1 -y 1 --linear  --relati
 
 SUFFIX=_3g_mut_sub_noov_g3
 tools/plot.py $DATA $PUB_1_1SIZE_B $ARGS $SCENARIOS -x 1 -y 1 --linear  --relatives-diffs --pairs='(1,0),'  -p P_block -n $SUFFIX --groups="('G3')" --title-suffix='' $FORMAT --y_min=-0.2 --y_max=0.4
-
-
 
 
 SCENARIOS='-i3,4'
