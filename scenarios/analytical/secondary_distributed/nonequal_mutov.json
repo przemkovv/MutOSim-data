@@ -1,0 +1,22 @@
+{
+  "name": "3+1 groups 149. Nonequal. Mut overflows.",
+  "_include": "base.json",
+  "groups": {
+    "G1": {
+      "capacity": 10,
+      "connected": ["G2", "G3", "G0"],
+      "overflow_policy": "random_available"
+    },
+    "G2": {
+      "capacity": 12,
+      "connected": ["G1", "G3", "G0"],
+      "overflow_policy": "random_available"
+    },
+
+    "G3": {
+      "capacity": 8,
+      "connected": ["G2", "G1", "G0"],
+      "overflow_policy": "random_available"
+    }
+  }
+}
